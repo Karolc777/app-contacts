@@ -6,18 +6,23 @@ import { ContactDetailsComponent } from './contact-details/contact-details.compo
 import { RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-
+import { ContactAddComponent } from './contact-add/contact-add.component';
+import {MatInputModule} from '@angular/material/input';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     ContactsListComponent,
-    ContactDetailsComponent
+    ContactDetailsComponent,
+    ContactAddComponent
   ],
   imports: [
     CommonModule,
     SharedModule,
     RouterModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatInputModule,
+    ReactiveFormsModule
   ],
   exports: [
     ContactsListComponent,
