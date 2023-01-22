@@ -4,6 +4,8 @@ import { ContactsListComponent } from './contacts-list/contacts-list.component';
 import { SharedModule } from '../shared/shared.module';
 import { ContactDetailsComponent } from './contact-details/contact-details.component';
 import { RouterModule } from '@angular/router';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -13,7 +15,9 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     SharedModule,
-    RouterModule
+    RouterModule,
+    MatButtonModule,
+    MatIconModule
   ],
   exports: [
     ContactsListComponent,
