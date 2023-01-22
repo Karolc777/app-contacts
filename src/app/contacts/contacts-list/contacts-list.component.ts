@@ -19,7 +19,7 @@ export class ContactsListComponent implements OnInit {
   }
 
   loadContacts() {
-    this.contactsService.getContacts().subscribe(cont => this.contacts = cont);
+    this.contactsService.getContacts().subscribe(contacts => this.contacts = contacts);
   }
 
 }

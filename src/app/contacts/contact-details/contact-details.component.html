@@ -1,5 +1,9 @@
 <app-header>
     <span content>:: Szczegóły wybranego kontaktu ::</span>
 </app-header>
-<p>contact-details works!</p>
+
+<p>Nazwisko: {{ contactDetails.surname }}</p>
+<p>Imię: {{ contactDetails.firstName }}</p>
+<p>Nr telefonu: {{ contactDetails.phoneNumber }}</p>
+
 <button [routerLink]="['/contacts']" type="button" class="btn btn-secondary">Wtecz</button>
