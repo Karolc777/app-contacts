@@ -3,22 +3,23 @@
 </app-header>
 
 <form [formGroup]="contactForm">
-    <mat-form-field>
+    <mat-form-field appearance="outline">
         <mat-label>Nazwisko</mat-label>
         <input formControlName="surname" matInput placeholder="Wpisz nazwisko">
     </mat-form-field>
-    <mat-form-field>
+    <mat-form-field appearance="outline">
         <mat-label>Imię</mat-label>
         <input formControlName="firstName" matInput placeholder="Wpisz Imię">
     </mat-form-field>
-    <mat-form-field>
+    <mat-form-field appearance="outline">
         <mat-label>Telefon</mat-label>
         <input formControlName="phoneNumber" matInput placeholder="Wpisz nr telefonu">
     </mat-form-field>
 </form>
 
 <button [routerLink]="['/contacts']" mat-stroked-button color="primary">Wstecz</button>
-<button mat-stroked-button color="accent">Zapisz</button>
+<button (click)="contactForm.reset()" mat-stroked-button color="warn">Wyczyść</button>
+<button (click)="addContact()" [disabled]="contactForm.invalid" mat-stroked-button color="accent">Zapisz</button>
 
 <pre>{{ contactForm.value | json}}</pre>
 <pre>{{ contactForm.status | json}}</pre>

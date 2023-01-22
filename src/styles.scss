@@ -3,6 +3,11 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; padding: 10px;}
 
+header {
+    display: flex;
+    align-items: center;
+}
+
 .header-span {
     margin-left: 20px;
     font-size: 24px;
